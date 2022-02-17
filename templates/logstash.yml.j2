@@ -1,0 +1,12 @@
+input {
+  beats {
+    port => 5044
+  }
+}
+
+output {
+        elasticsearch {
+            hosts    => "[http://{{ hostvars['node01.netology.yc']['ansible_facts']['default_ipv4']['address'] }}:9200]"
+            index    => "system-%{+YYYY.MM.dd}"
+        }
+}
