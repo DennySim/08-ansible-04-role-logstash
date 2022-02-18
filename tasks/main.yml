@@ -15,5 +15,5 @@
   become: true
   template:
     src: logstash.yml.j2
-    dest: /etc/logstash/logstash.yml
+    dest: /etc/logstash/conf.d/beats.conf
   notify: restart Logstash
