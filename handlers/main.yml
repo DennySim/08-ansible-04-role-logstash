@@ -3,4 +3,4 @@
   become: true
   service:
     name: logstash
-    state: restarted    
+    state: restarted 

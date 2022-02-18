@@ -6,7 +6,8 @@ input {
 
 output {
         elasticsearch {
-            hosts    => "[http://{{ hostvars['node01.netology.yc']['ansible_facts']['default_ipv4']['address'] }}:9200]"
+#            hosts    => "[http://{{ hostvars['node01.netology.yc']['ansible_facts']['default_ipv4']['address'] }}:9200]"
+            hosts    => "[http://localhost:9200]"
             index    => "system-%{+YYYY.MM.dd}"
         }
 }

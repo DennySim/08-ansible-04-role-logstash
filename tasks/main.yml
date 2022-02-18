@@ -10,7 +10,7 @@
   become: true
   yum:
     name: "/tmp/logstash-{{ logstash_stack_version }}-x86_64.rpm"
-    state: present        
+    state: present
 - name: Configure Logstash
   become: true
   template:
